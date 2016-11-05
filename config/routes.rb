@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :notes
 
+  # To: Define a different root route for logged in out users the root of the application needs to be below the autheticated route
   authenticated :user do
     root 'notes#index', as: :authenticated_root
   end

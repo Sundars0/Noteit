@@ -1,0 +1,21 @@
+!!!
+%html
+%head
+  %title NoteIt | Your online Notebook
+  = csrf_meta_tags
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %link{:rel => "stylesheet", :href => "//maxcdn.bootstrap.com/font-awesome/4.2.0/css/font-awesome.min.css"}
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+  %header
+    .header_inner
+      = link_to image_tag('logo.svg'), root_path, id: "logo"
+      %nav
+        - if user_signed_in?
+          = link_to "New Note", new_note_path
+          = link_to "Sign Out", destroy_user_session_path, method: :delete
+        - else
+          =link_to "Sign In", new_user_session_path
+  %p.notice= notice
+  %p.alert= alert
+  = yield

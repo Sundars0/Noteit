@@ -1,1 +1,35 @@
-%h1 This is the root path
+#banner
+  .banner_content
+    %h1 NoteNote
+    %p Your online notebook. Never forget an idea again.
+    %button= link_to "Sign Up", new_user_registration_path
+
+#testimonial
+  .wrapper
+    %p.quote "An Awesome notebook application"
+    %p.name - TestUser
+
+#callouts
+  .callout_inner
+    .wrapper
+      .callout
+        %i.fa.fa-pencil-square-o.fa-2x
+        %h2 Notes
+        %p Quinoa copper mug hashtag pour-over single-origin coffee crucifix, pitchfork ethical man bun swag waistcoat squid kale chips venmo tbh. Ramps disrupt lo-fi unicorn deep v. Stumptown jianbing hexagon godard, activated charcoal man braid chambray kale chips taxidermy 3 wolf moon copper mug succulents.
+      .callout
+        %i.fa.fa-rocket.fa-2x
+        %h2 Notes
+        %p Quinoa copper mug hashtag pour-over single-origin coffee crucifix, pitchfork ethical man bun swag waistcoat squid kale chips venmo tbh. Ramps disrupt lo-fi unicorn deep v. Stumptown jianbing hexagon godard, activated charcoal man braid chambray kale chips taxidermy 3 wolf moon copper mug succulents.
+      .callout
+        %i.fa.fa-bolt.fa-2x
+        %h2 Notes
+        %p Quinoa copper mug hashtag pour-over single-origin coffee crucifix, pitchfork ethical man bun swag waistcoat squid kale chips venmo tbh. Ramps disrupt lo-fi unicorn deep v. Stumptown jianbing hexagon godard, activated charcoal man braid chambray kale chips taxidermy 3 wolf moon copper mug succulents.
+#bottom_cta
+  .wrapper
+    %h2 For Real?
+    %p Do Sign up... Else!!
+    %button= link_to "Click Me!!", new_user_registration_path
+    
+
+%footer
+  %p &copy; Ruby on Rails 2016
